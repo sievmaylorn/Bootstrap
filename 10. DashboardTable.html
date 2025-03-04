@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Table</title>
+    <!--  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <!--  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--  -->
+    <link rel="shortcut icon" type="x-icon" href="https://cdn-icons-png.flaticon.com/128/1828/1828791.png">
+    <!--  -->
+</head>
+
+<style>
+    .delay {
+        transition: 0.15s ease-in-out;
+    }
+    .hover-bg:hover {
+        border-radius: 10px;
+        background-color: rgb(152, 146, 147) !important;
+        color: black;
+    }
+   
+    .hovertr:hover>td:nth-child(4)>button{
+        opacity: 1 !important;
+    }
+    
+</style>
+
+<body>
+    <div class="container-fluid p-0">
+        <div class="d-flex">
+            <div class="col-2 ">
+                <div class="col-2 bg-black position-fixed text-light p-3 " style="height: 100vh;">
+                    <div class="p-2">
+                         <h3 class="fw-bold">Mobile
+                     <span class="text-warning ">Legend</span>
+                </h3>
+                    </div>
+
+                     <ul class="list-unstyled mt-3">
+                        <a href="" class="text-light text-decoration-none">
+                            <li class="rounded-3 p-2 hover-bg delay my-2">
+                                <i class="bi bi-person-circle fs-5 me-1"></i>
+                                Admin
+                            </li>
+                      </a>
+
+                <a href="" class="text-light text-decoration-none">
+                    <li class="rounded-3 p-2 hover-bg delay my-2">
+                        <i class="bi bi-currency-dollar fs-5 me-1"></i>
+                        Income
+                    </li>
+                </a>
+
+              </ul>
+
+                </div>
+            </div>
+           
+            <div class="col-10" style="height: 150vh;">
+              <!-- Header -->
+                <header class="d-flex align-items-center p-2 px-4 border-bottom">
+                    <div class="col-6">
+                        <h5 class="m-0">Admin</h5>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end align-items-center">
+                        <div style="height: 35px; width: 35px;" class="rounded-circle bg-secondary overflow-hidden">
+                            <img src="https://i.pinimg.com/474x/b2/3e/67/b23e67bfacf922cd4ec387bf79b15c99.jpg" 
+                           class="w-100 h-100 object-fit-cover" alt="Nana No image">
+                        </div> <!-- object-fit-cover ដើម្បីអោយរូបភាព fit-->
+                        
+                        <!-- Example Single danger button -->
+                        <div class="btn-group">
+                                <button type="button" class="btn border-0 dropdown-toggle" data-bs-toggle="dropdown">
+                                        Mss Nana
+                                </button>
+                                
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                        </div>
+                        
+                    <button type="button" class="bnt border-0 position-relative">
+                        <i class="bi bi-bell-fill fs-5"></i>
+                        <span style="top: 8px; left: 99;" class="position-absolute translate-middle badge rounded-pill bg-danger">
+                             99+
+                             <span class="visually-hidden">Unread Messages</span>
+                           </span>
+                    </button>
+                </div>
+                </header>
+
+                <!-- Main -->
+                <main class="p-4 bg-light ">
+                   <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="fw-normal m-0">Member Admin</h2>
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalform">
+                            +Add Member
+                        </button>
+                   </div>
+
+        <!-- Navtab -->
+        <ul class="nav nav-tabs mt-4 justify-content-between" id="myTab">
+            <div class="d-flex">
+                <li class="nav-item" >
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" >All Member</button>
+                  </li>
+                <li class="nav-item" >
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" >Pending</button>
+                </li>
+                <li class="nav-item" >
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button">Cancel</button>
+                </li>
+            </div>
+            <form action="" class="d-flex bg-body border rounded-3 ">
+                <button class="btn border-0"><i class="bi bi-search"></i></button>
+                <input type="text" name="" id="" class="form-control shadow-none border-0 px-0" placeholder="Search...">
+            </form>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane"   >
+                
+                <table class="table table-hover mt-2 rounded-3 overflow-hidden">
+                    <thead class="">
+                    <tr >
+                        <td class="text-secondary">Name/Course</td>
+                        <td class="text-secondary">Plan/Salary</td>
+                        <td class="text-secondary">Payment Method</td>
+                        <td class="text-secondary">Status</td>
+                        <td></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="align-middle hovertr">
+                            <td class="d-flex align-items-center">
+                                <div class="bg-black rounded-circle overflow-hidden" style="width: 45px;height: 45px;">
+                                    <img src="https://i.pinimg.com/736x/1c/0a/24/1c0a24ef003e5cc4b123f0bf616f3379.jpg" alt="" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="ms-2">
+                                    <p class="m-0">Mss Jasica</p>
+                                    <p class="m-0 text-success">Web designer</p>
+                                </div>
+                            </td>
+                            <td >
+                            <span class="mb-0">Full-time</span>
+                            &emsp;&emsp;&emsp;
+                            <span class="mb-0">$200</span>
+                            </td>
+                            <td>Credit Card</td>
+                            <td>
+                                <span class="bg-danger-subtle p-1 rounded-3 px-2 text-danger">Unavailable</span>
+                                <button class="btn bg-success-subtle mx-4 rounded-5 px-4 opacity-0 ">
+                                    View
+                                </button>
+                            
+                            </td>
+                            <td>
+                                <button class="btn pb-2 border-0 text-end">
+                                    ...
+                                </button>
+                            </td>
+                            
+                        </tr>
+
+                        <tr class="align-middle hovertr">
+                            <td class="d-flex align-items-center">
+                                <div class="bg-black rounded-circle overflow-hidden" style="width: 45px;height: 45px;">
+                                    <img src="https://i.pinimg.com/736x/1c/0a/24/1c0a24ef003e5cc4b123f0bf616f3379.jpg" alt="" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="ms-2">
+                                    <p class="m-0">Mss Jasica</p>
+                                    <p class="m-0 text-success">Web designer</p>
+                                </div>
+                            </td>
+                            <td >
+                            <span class="mb-0">Full-time</span>
+                            &emsp;&emsp;&emsp;
+                            <span class="mb-0">$200</span>
+                            </td>
+                            <td>Credit Card</td>
+                            <td>
+                                <span class="bg-danger-subtle p-1 rounded-3 px-2 text-danger">Unavailable</span>
+                                <button class="btn bg-success-subtle mx-4 rounded-5 px-4 opacity-0 ">
+                                    View
+                                </button>
+                            
+                            </td>
+                            <td>
+                                <button class="btn pb-2 border-0 text-end">
+                                    ...
+                                </button>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>          
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane"   >
+                <table class="table table-hover mt-2 rounded-3 overflow-hidden">
+                    <thead class="">
+                    <tr >
+                        <td class="text-secondary">Name/Course</td>
+                        <td class="text-secondary">Plan/Salary</td>
+                        <td class="text-secondary">Payment Method</td>
+                        <td class="text-secondary">Status</td>
+                        <td></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="align-middle hovertr">
+                            <td class="d-flex align-items-center">
+                                <div class="bg-black rounded-circle overflow-hidden" style="width: 45px;height: 45px;">
+                                    <img src="https://i.pinimg.com/736x/1c/0a/24/1c0a24ef003e5cc4b123f0bf616f3379.jpg" alt="" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="ms-2">
+                                    <p class="m-0">Mss Jasicaj</p>
+                                    <p class="m-0 text-success">Web designer</p>
+                                </div>
+                            </td>
+                            <td >
+                            <span class="mb-0">Full-time</span>
+                            &emsp;&emsp;&emsp;
+                            <span class="mb-0">$100</span>
+                            </td>
+                            <td>Credit Card</td>
+                            <td>
+                                <span class="bg-danger-subtle p-1 rounded-3 px-2 text-danger">Unavailable</span>
+                                <button class="btn bg-success-subtle mx-4 rounded-5 px-4 opacity-0 ">
+                                    View
+                                </button>
+                            
+                            </td>
+                            <td>
+                                <button class="btn pb-2 border-0 text-end">
+                                    ...
+                                </button>
+                            </td>
+                            
+                        </tr>
+                        <tr class="align-middle hovertr">
+                            <td class="d-flex align-items-center">
+                                <div class="bg-black rounded-circle overflow-hidden" style="width: 45px;height: 45px;">
+                                    <img src="https://i.pinimg.com/736x/1c/0a/24/1c0a24ef003e5cc4b123f0bf616f3379.jpg" alt="" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="ms-2">
+                                    <p class="m-0">Mss Jesica</p>
+                                    <p class="m-0 text-success">Web designer</p>
+                                </div>
+                            </td>
+                            <td >
+                            <span class="mb-0">Full-time</span>
+                            &emsp;&emsp;&emsp;
+                            <span class="mb-0">$200</span>
+                            </td>
+                            <td>Credit Card</td>
+                            <td>
+                                <span class="bg-danger-subtle p-1 rounded-3 px-2 text-danger">Unavailable</span>
+                                <button class="btn bg-success-subtle mx-4 rounded-5 px-4 opacity-0 ">
+                                    View
+                                </button>
+                            
+                            </td>
+                            <td>
+                                <button class="btn pb-2 border-0 text-end">
+                                    ...
+                                </button>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                <div class="tab-pane fade " id="contact-tab-pane">...</div>
+                <div class="tab-pane fade " id="disabled-tab-pane">...</div>
+
+            </div> 
+        </main>
+        </div>
+    </div>
+
+    <!-- Modal -->
+         <div class="modal fade" id="modalform">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5">
+                            Form Add
+                        </h1>       
+                        <button class="btn-close" data-bs-dismiss="modal"></button>         
+                    </div>
+            
+                <div class="modal-body">
+                  
+                    <form action="">
+                        <label for=""></label>
+                        <input type="text" name="" id="">
+                        <button>Submit</button>
+                    </form>
+                  </div>
+                 </div>
+            </div>        
+        </div>
+    </div>
+</body>
+</html>
